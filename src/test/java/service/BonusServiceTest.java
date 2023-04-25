@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class BonusServiceTest {
 
     @Test
-    void bonusDeveriaSerZeroParaFuncionarioMuitoAlto(){
+    void bonusDeveriaSerZeroParaFuncionarioMuitoAlto() {
 
         BonusService service = new BonusService();
         BigDecimal bonus = service.calcularBonus(new Funcionario("Pedro", LocalDate.now(), new BigDecimal(24000)));
@@ -21,7 +21,7 @@ class BonusServiceTest {
     }
 
     @Test
-    void bonusDeveriaSer10ParaFuncionario(){
+    void bonusDeveriaSer10ParaFuncionario() {
 
         BonusService service = new BonusService();
         BigDecimal bonus = service.calcularBonus(new Funcionario("Pedro", LocalDate.now(), new BigDecimal(2500)));
@@ -30,7 +30,7 @@ class BonusServiceTest {
     }
 
     @Test
-    void bonusDeveriaSerZero(){
+    void bonusDeveriaSerZero() {
 
         BonusService service = new BonusService();
         BigDecimal bonus = service.calcularBonus(new Funcionario("Pedro", LocalDate.now(), new BigDecimal(10000)));
