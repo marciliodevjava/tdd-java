@@ -13,7 +13,6 @@ class BonusServiceTest {
 
     @Test
     void bonusDeveriaSerZeroParaFuncionarioMuitoAlto() {
-
         BonusService service = new BonusService();
         BigDecimal bonus = service.calcularBonus(new Funcionario("Pedro", LocalDate.now(), new BigDecimal(24000)));
 
@@ -22,7 +21,6 @@ class BonusServiceTest {
 
     @Test
     void bonusDeveriaSer10ParaFuncionario() {
-
         BonusService service = new BonusService();
         BigDecimal bonus = service.calcularBonus(new Funcionario("Pedro", LocalDate.now(), new BigDecimal(2500)));
 
@@ -31,7 +29,6 @@ class BonusServiceTest {
 
     @Test
     void bonusDeveriaSerZero() {
-
         BonusService service = new BonusService();
         BigDecimal bonus = service.calcularBonus(new Funcionario("Pedro", LocalDate.now(), new BigDecimal(10000)));
 
