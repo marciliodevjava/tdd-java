@@ -6,6 +6,7 @@ import br.com.alura.tdd.service.ReajusteService;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,9 +14,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ReajusteServiceTest {
 
     private static final String NOME_FUNCIONARIO = "Pedro";
-    private static final BigDecimal SALARIO_BASICO = BigDecimal.valueOf(1300.00);
-    private static final BigDecimal SALARIO_MEDIO = BigDecimal.valueOf(2500.00);
-    private static final BigDecimal SALARIO_BOM = BigDecimal.valueOf(4500.00);
+    private static final BigDecimal SALARIO_BASICO = BigDecimal.valueOf(1300);
+    private static final BigDecimal SALARIO_MEDIO = BigDecimal.valueOf(2500);
+    private static final BigDecimal SALARIO_BOM = BigDecimal.valueOf(4500);
 
     @Test
     void reajusteFuncionarioADesejar(){
