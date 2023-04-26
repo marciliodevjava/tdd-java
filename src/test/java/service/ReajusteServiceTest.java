@@ -12,10 +12,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ReajusteServiceTest {
 
+    private static final String NOME_FUNCIONARIO = "Pedro";
+    private static final BigDecimal SALARIO_BASICO = BigDecimal.valueOf(1300.00);
+    private static final BigDecimal SALARIO_MEDIO = BigDecimal.valueOf(2500.00);
+    private static final BigDecimal SALARIO_BOM = BigDecimal.valueOf(4500.00);
+
     @Test
     void reajusteFuncionarioADesejar(){
         ReajusteService service = new ReajusteService();
-        Funcionario funcionario = new Funcionario("Pedro", LocalDate.now(), new BigDecimal("1300"));
+        Funcionario funcionario = new Funcionario(NOME_FUNCIONARIO, LocalDate.now(), SALARIO_BASICO);
 
         Funcionario result = service.concederReajuste(funcionario, Desempenho.A_DESEJAR);
 
@@ -25,7 +30,7 @@ class ReajusteServiceTest {
     @Test
     void reajusteFuncionarioBom(){
         ReajusteService service = new ReajusteService();
-        Funcionario funcionario = new Funcionario("Pedro", LocalDate.now(), new BigDecimal("2500"));
+        Funcionario funcionario = new Funcionario(NOME_FUNCIONARIO, LocalDate.now(), SALARIO_MEDIO);
 
         Funcionario result = service.concederReajuste(funcionario, Desempenho.BOM);
 
@@ -35,7 +40,7 @@ class ReajusteServiceTest {
     @Test
     void reajusteFuncionarioOtimo(){
         ReajusteService service = new ReajusteService();
-        Funcionario funcionario = new Funcionario("Pedro", LocalDate.now(), new BigDecimal("4500"));
+        Funcionario funcionario = new Funcionario(NOME_FUNCIONARIO, LocalDate.now(), SALARIO_BOM);
 
         Funcionario result = service.concederReajuste(funcionario, Desempenho.OTIMO);
 
