@@ -20,9 +20,9 @@ class ReajusteServiceTest {
     private static final BigDecimal SALARIO_MEDIO = BigDecimal.valueOf(2500);
     private static final BigDecimal SALARIO_BOM = BigDecimal.valueOf(4500);
 
-    private ReajusteService service = new ReajusteService();
+    private final ReajusteService service = new ReajusteService();
     private Funcionario funcionario;
-    private int teste = 1;
+    private static int teste = 1;
 
     @BeforeAll
     public static void antesDeTodos(){
@@ -31,7 +31,8 @@ class ReajusteServiceTest {
 
     @BeforeEach
     public void inicializar(){
-        System.out.println("Teste Inicializado Nº: " + this.teste);
+        System.out.println("Teste Inicializado Nº: " + teste);
+        teste += 1;
     }
 
     @BeforeAll
