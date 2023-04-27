@@ -19,7 +19,6 @@ class ReajusteServiceTest {
     private static final BigDecimal SALARIO_BASICO = BigDecimal.valueOf(1300);
     private static final BigDecimal SALARIO_MEDIO = BigDecimal.valueOf(2500);
     private static final BigDecimal SALARIO_BOM = BigDecimal.valueOf(4500);
-
     private final ReajusteService service = new ReajusteService();
     private Funcionario funcionario;
     private static int teste = 1;
