@@ -16,7 +16,7 @@ class BonusServiceTest {
     void bonusDeveriaSerZeroParaFuncionarioMuitoAlto() {
         BonusService service = new BonusService();
 
-        assertThrows(IllegalArgumentException.class , () -> service.calcularBonus(new Funcionario("Pedro", LocalDate.now(), new BigDecimal(24000))));
+        assertThrows(IllegalArgumentException.class, () -> service.calcularBonus(new Funcionario("Pedro", LocalDate.now(), new BigDecimal(24000))));
     }
 
     @Test
