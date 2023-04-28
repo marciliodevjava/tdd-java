@@ -24,27 +24,28 @@ class ReajusteServiceTest {
     private static int teste = 1;
 
     @BeforeAll
-    public static void antesDeTodos(){
+    public static void antesDeTodos() {
         System.out.println("Inicializando o teste ReajusteServiceTest");
     }
 
     @BeforeEach
-    public void inicializar(){
+    public void inicializar() {
         System.out.println("Teste Inicializado Nº: " + teste);
         teste += 1;
     }
 
     @BeforeAll
-    public static void finalizar(){
+    public static void finalizar() {
         System.out.println("Teste Inicializado.");
     }
+
     @AfterAll
-    public static void fimDeTodos(){
+    public static void fimDeTodos() {
         System.out.println("Finalizado os teste ReajusteServiceTest");
     }
 
     @Test
-    void reajusteFuncionarioADesejar(){
+    void reajusteFuncionarioADesejar() {
         funcionario = new Funcionario(NOME_FUNCIONARIO, LocalDate.now(), SALARIO_BASICO);
 
         Funcionario result = service.concederReajuste(funcionario, Desempenho.A_DESEJAR);
@@ -53,7 +54,7 @@ class ReajusteServiceTest {
     }
 
     @Test
-    void reajusteFuncionarioBom(){
+    void reajusteFuncionarioBom() {
         funcionario = new Funcionario(NOME_FUNCIONARIO, LocalDate.now(), SALARIO_MEDIO);
 
         Funcionario result = this.service.concederReajuste(funcionario, Desempenho.BOM);
@@ -62,7 +63,7 @@ class ReajusteServiceTest {
     }
 
     @Test
-    void reajusteFuncionarioOtimo(){
+    void reajusteFuncionarioOtimo() {
         funcionario = new Funcionario(NOME_FUNCIONARIO, LocalDate.now(), SALARIO_BOM);
 
         Funcionario result = service.concederReajuste(funcionario, Desempenho.OTIMO);
